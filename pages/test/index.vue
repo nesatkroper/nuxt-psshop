@@ -1,25 +1,17 @@
 <template>
   <div>
-    <!--  -->
     <p>Count: {{ counterStore.count }}</p>
     <p>Double Count: {{ counterStore.doubleCount }}</p>
     <button @click="incrementCount">Increment</button>
-    <Calendar />
-    <Calendar />
-    <Calendar />
-    <Calendar />
-    <Calendar />
-    <Calendar />
-    <Calendar />
-    <Calendar />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { Calendar } from "@/components/ui/calendar";
 import { useCounterStore } from "@/stores/counter";
 const counterStore = useCounterStore();
 function incrementCount() {
   counterStore.increment();
 }
 </script>
+
+<style></style>

@@ -15,7 +15,4 @@
 *::-webkit-scrollbar {
   display: none;
 }
-body {
-  /* background-color: rgb(230, 230, 230); */
-}
 </style>

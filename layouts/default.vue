@@ -1,7 +1,7 @@
 <template>
   <div>
     <AppHeader />
-    <AppNavbar />
+    <!-- <AppNavbar /> -->
     <AppSidebar />
     <div class="my-16">
       <slot />

@@ -81,11 +81,11 @@ onMounted(() => {
 });
 </script>
 <template>
-  <div class="fixed w-[100%] top-0">
+  <div class="fixed w-[100%] top-0 bg-opacity-0">
     <header class="shadow-xl">
       <nav class="container mx-auto flex items-center justify-between py-3">
         <div class="flex items-center space-x-4">
-          <span class="text-xl font-bold text-gray-900">MyApp</span>
+          <span class="text-xl font-bold">MyApp</span>
         </div>
 
         <div class="hidden md:flex items-center space-x-6">
