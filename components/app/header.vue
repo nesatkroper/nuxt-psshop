@@ -127,7 +127,7 @@ const isOpen = ref(false);
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink
-                  href="/about"
+                  href="/test"
                   :class="navigationMenuTriggerStyle()"
                 >
                   About
