@@ -11,7 +11,6 @@ import { ref } from "vue";
 import { useUserStore } from "~/stores/user";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { test } from "~/stores/test";
 const inputName = ref("");
 const userStore = useUserStore();
 const handleSubmit = () => {
