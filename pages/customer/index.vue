@@ -57,13 +57,12 @@ import { FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
-import { DOMAIN, API_URL } from "../../config/api";
-
+import { useApiStore } from "~/stores/api";
 import { Toaster } from "@/components/ui/toast";
 
 const { toast } = useToast();
-const customer = ref<Customer[]>([]);
-const edit = ref<Customer[]>([]);
+const customer = ref([]);
+const edit = ref([]);
 const datetime = ref(new Date().toLocaleString());
 const selectFile = ref("");
 const imgUrl = ref("");
@@ -72,6 +71,10 @@ const gender = ref("");
 const email = ref("");
 const phone = ref("");
 const address = ref("");
+
+const apiStore = useApiStore();
+const apiUrl = apiStore.api.apiUrl;
+const domain = apiStore.api.domain;
 
 const clearInput = () => {
   name.value = "";
@@ -84,7 +87,7 @@ const clearInput = () => {
 };
 
 const fetchData = async () => {
-  const response = await fetch(`${API_URL}/customer`);
+  const response = await fetch(`${apiUrl}/customer`);
   customer.value = (await response?.json()) ?? [];
   console.log(customer.value);
 };
